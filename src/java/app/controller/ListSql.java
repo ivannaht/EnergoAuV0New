@@ -25,10 +25,8 @@ public class ListSql extends HttpServlet {
         try {
             Connection connection = dataSource.getConnection();
             Statement stmt =connection.createStatement();
-            //ResultSet rs =stmt.executeQuery("SELECT Name_of_institution from building_parameters");
             ResultSet rsList =stmt.executeQuery("SELECT  Name_of_institution, Locations"+" from building_parameters");
              while (rsList.next()){
-            //String name = rs.getString("Name_of_institution");
                  String place = rsList.getString("Name_of_institution") +" "+"("+rsList.getString("Locations")+")";
             pw.println ("<h3>"+"<li>"+place+"</li>"+"</h3>");
             pw.flush();

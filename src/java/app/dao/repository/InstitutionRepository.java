@@ -9,36 +9,31 @@ import java.sql.Statement;
 
 public class InstitutionRepository {
 
-
-    public Institution getInstitution() {
-
-            DataSource dataSource = new DataSource();
-
-            String sql = "SELECT * from institution";
-
-            try (
-                    Connection conn = dataSource.getConnection();
-                    Statement stmt = conn.createStatement();
-                    ResultSet rs = stmt.executeQuery(sql);
-            ) {
-                if (rs.next()) {
-                    Institution institution = new Institution(
-                            rs.getString("Login"),
-                            rs.getString("Password"),
-                            rs.getString("Name_of_institution"),
-                            rs.getString("Head_of_institution"),
-                            rs.getString("Phone_number")
-                    );
-
-                    return institution;
-
-                }
-
-            } catch (SQLException e) {
-                e.printStackTrace();
+    public Institution getByLoginByPassword(String Login, String Password) {
+        DataSource dataSource = new DataSource();
+        try {
+            Connection connection = dataSource.getConnection();
+            Statement stmt =connection.createStatement();
+            ResultSet rsSign =stmt.executeQuery("SELECT Login, Password, Name_of_institution, Head_of_institution, Phone_number " +
+                    "FROM institution " +
+                    "WHERE institution.Login='" + Login + "'");
+            while (rsSign.next()){
+                Institution institution = new Institution(
+                        rsSign.getString("Login"),
+                        rsSign.getString("Password"),
+                        rsSign.getString("Name_of_institution"),
+                        rsSign.getString("Head_of_institution"),
+                        rsSign.getString("Phone_number")
+                );
+                return institution;
             }
-
-            return null;
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-    }
+        return null;
+    }}
+
+
+
 

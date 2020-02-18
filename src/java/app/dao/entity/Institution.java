@@ -9,15 +9,15 @@ public class Institution {
     private String Head_of_institution;
     private String Phone_number;
 
-    public Institution(String login, String password) {
+    public Institution(String resultSetString, String string) {
             }
 
-    public Institution(String login, String password, String name_of_institution, String head_of_institution, String phone_number) {
-        this.Login = login;
-        this.Password = password;
-        this.Name_of_institution = name_of_institution;
-        this.Head_of_institution = head_of_institution;
-        this.Phone_number = phone_number;
+    public Institution(String Login, String Password, String Name_of_institution, String Head_of_institution, String Phone_number) {
+        this.Login = Login;
+        this.Password = Password;
+        this.Name_of_institution = Name_of_institution;
+        this.Head_of_institution = Head_of_institution;
+        this.Phone_number = Phone_number;
     }
 
     public String getLogin() {
