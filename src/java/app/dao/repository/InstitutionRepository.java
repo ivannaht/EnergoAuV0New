@@ -16,7 +16,7 @@ public class InstitutionRepository {
             Statement stmt =connection.createStatement();
             ResultSet rsSign =stmt.executeQuery("SELECT Login, Password, Name_of_institution, Head_of_institution, Phone_number " +
                     "FROM institution " +
-                    "WHERE institution.Login='" + Login + "'");
+                    "WHERE institution.Login='" + Login + "' AND institution.Password='" + Password + "'");
             while (rsSign.next()){
                 Institution institution = new Institution(
                         rsSign.getString("Login"),
