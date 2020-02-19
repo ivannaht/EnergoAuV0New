@@ -1,12 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 10.02.2020
-  Time: 11:56
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<p>
+<%--@ page language="java"
+         contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"--%>
+<%--@ page import ="java.sql.*"--%>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Userpage</title>
@@ -33,7 +30,9 @@
 </div>
 <div class="w3-card-4">
     <div class="w3-container w3-center w3-green">
-    <h2> Name_of_institution</h2>
+
+        <h3><p> You are logged in as  "<%=request.getAttribute("LoginUser")%>" </p></h3>
+
 </div>
 
 <td align="center">
@@ -55,43 +54,38 @@
     <img src="image0012.jpg" align=left style='width:245pt;height:164pt;visibility:visible;mso-wrap-style:square'o:title="Фото"; alt="діаграма"/>
 
 
-<form  method="post" action="ListSql">
-        <%
-	String Login =  request.getParameter("Login");
-	String Password = request.getParameter("Password"); //потім вилучити цей рядок
-	String Name_of_institution = request.getParameter("pass");
-	String Head_of_institution = request.getParameter("address");
-	String Phone_number = request.getParameter("age");
-
-%>
-
-
-
-    </head>
-    <body>
-        <table style= "width: 50%; background-color: #e7e7e7; color: #020202; margin-left: 50%; border: #B2E2D7;line-height: 2.5;">
+<form  method="post" action="Sign">
+    <table style= "width: 50%; background-color: #e7e7e7; color: #020202; margin-left: 50%; border: #B2E2D7;line-height: 2.5;">
         <tr>
             <td>Login</td>
-            <td><%= Login %></td>
+            <td><%=request.getAttribute("LoginUser")%></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><%= Password %></td>
+            <td><%=request.getAttribute("PasswordUser")%></td>
         </tr>
         <tr>
             <td>Name_of_institution</td>
-            <td><%= Name_of_institution %></td>
+            <td><%=request.getAttribute("Name_of_institutionUser")%></td>
         </tr>
         <tr>
             <td>Head_of_institution</td>
-            <td><%= Head_of_institution %></td>
+            <td><%=request.getAttribute("Head_of_institutionUser")%></td>
         </tr>
         <tr>
             <td>Phone_number</td>
-            <td><%= Phone_number %></td>
+            <td><%=request.getAttribute("Phone_numberUser")%></td>
         </tr>
     </table>
-     </body>
 </form>
+
+
+    <table center>
+        <tr>
+            <th>location</th>
+                <td><%=request.getAttribute("location")%></td>
+            </tr>
+    </table>
+
 
 </html>
