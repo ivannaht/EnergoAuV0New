@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html ><head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="table_fd.css"/>
     <title>Feedback</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

@@ -35,7 +35,6 @@ public class FeedbackFormServlet extends HttpServlet {
         String Subject = request.getParameter("Subject");
         String Comments = request.getParameter("Comments");
 
-
         FeedbackRepository.addFeedback(First_Name, Last_Name, Email, Subject, Comments);
         PrintWriter printWriter;
         try {
