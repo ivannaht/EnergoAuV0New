@@ -39,15 +39,15 @@ label {class: "w3-row-padding";
 <h4>Messages of inquiry will be answered as time permits. All fields are required.</h4>
     </div>
 
-                                <form class="w3-container" id="feedback_form" action="#" remote="">
+                                <form class="w3-container" id="feedback_form" method="post" action="FeedbackFormServlet">
                                     <input id="feedback_redirect" type="hidden" value="/feedback-received">
 
 
-                                            <label for="feedback_first_name">First name</label>
-                                            <input class="w3-input" id="feedback_first_name" type="text" placeholder="First name" style="width: 300px;">
+                                            <label for="First_Name">First name</label>
+                                            <input class="w3-input" id="First_Name" name="First_Name" type="text" placeholder="First name" style="width: 300px;">
 
-                                            <label for="feedback_last_name">Last name</label>
-                                            <input class="w3-input" id="feedback_last_name" type="text" placeholder="Last name" style="width: 300px;" >
+                                            <label for="Last_Name">Last name</label>
+                                            <input class="w3-input" id="Last_Name"  name="Last_Name" type="text" placeholder="Last name" style="width: 300px;" >
 
                                             <label for="feedback_email">Email</label>
                                             <input class="w3-input"   id="feedback_email" type="email" placeholder="Enter email address" style="width: 300px;" >
