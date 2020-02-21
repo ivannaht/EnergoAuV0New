@@ -49,12 +49,12 @@ label {class: "w3-row-padding";
                                             <label for="Last_Name">Last name</label>
                                             <input class="w3-input" id="Last_Name"  name="Last_Name" type="text" placeholder="Last name" style="width: 300px;" >
 
-                                            <label for="feedback_email">Email</label>
-                                            <input class="w3-input"   id="feedback_email" type="email" placeholder="Enter email address" style="width: 300px;" >
+                                            <label for="Email">Email</label>
+                                            <input class="w3-input"   id="Email" name="Email"type="email" placeholder="Enter email address" style="width: 300px;" >
 
-                                            <label for="feedback_subject">Subject</label>
+                                            <label for="Subject">Subject</label>
                                     <div style="width: 300px;">
-                                            <select  class="w3-select" id="feedback_subject" >
+                                            <select  class="w3-select" id="Subject" name="Subject">
                                                 <option value="" disabled selected>Choose your subject</option>
                                                 <option value="suggestion">Suggestion</option>
                                                 <option value="factual error">Factual Error</option>
@@ -62,8 +62,8 @@ label {class: "w3-row-padding";
                                                 <option value="other">Other</option>
                                             </select>
                                     </div>
-                                            <label class="w3-input"for="feedback_comments">Comments</label>
-                                            <textarea id="feedback_comments" placeholder="Comments" cols="120" rows="5" type="text"></textarea>
+                                            <label class="w3-input"for="Comments">Comments</label>
+                                            <textarea id="Comments" name="Comments" placeholder="Comments" cols="120" rows="5" type="text"></textarea>
 
                                         <input class="button" onclick="checkFeedbackForm(); return false;" type="submit" value="Submit feedback">
 
