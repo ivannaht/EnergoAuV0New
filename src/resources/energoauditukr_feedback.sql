@@ -1,0 +1,1 @@
+INSERT INTO energoauditukr.feedback (First_Name, Last_Name, Email, Subject, Comments) VALUES ('Ліля', 'Тарасів', 'lilya@umail.net', 'technical problem with website', 'Мій перший відгук');
