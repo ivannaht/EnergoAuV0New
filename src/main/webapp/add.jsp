@@ -33,23 +33,23 @@
             <label>Password:
                 <input type="password" name="pass" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
+            <label>Name_of_institution:
+                <input type="text" name="Name_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
+            </label>
+            <label>Head_of_institution:
+                <input type="text" name="Head_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
+            </label>
+            <label>Phone_number:
+                <input type="text" name="Phone_number" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            </label>
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
     </div>
 </div>
 
+<div class="w3-container w3-opacity w3-right-align w3-padding">
+<a href="/index.jsp"  class="w3-btn w3-round-large" >back to main</a>
+</div>
 
-
-<div class="w3-container w3-padding">
-        <%
-            PrintWriter pw =response.getWriter();
-            if (request.getAttribute("userName") != null) {
-                pw.println("<div class=\"w3-panel w3-green w3-display-container w3-card-4 w3-round\">\n" +
-                        "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
-                        "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-green w3-border w3-border-green w3-hover-border-grey\">×</span>\n" +
-                        "   <h5>User '" + request.getAttribute("login") + "' added!</h5>\n" +
-                        "</div>");
-            }
-            %>
 </body>
 </html>

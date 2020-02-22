@@ -47,14 +47,15 @@
 </table>
 
 <img src="image009.jpg"style='width:365.5pt;height:291pt;visibility:visible;mso-wrap-style:square' align="left" width="160" height="130" style=" border: 8px solid #ffffff;" />
-    <br><p>Energy audit allows you to understand how energy is used indoors or in a building. It shows all locations of heat losses and detects where energy is being used inefficiently.
+    <br><p><h5>Energy audit allows you to understand how energy is used indoors or in a building. It shows all locations of heat losses and detects where energy is being used inefficiently.
     The energy audit procedure should always be comprehensive. It includes:
-    - monitoring of heat losses through walls, windows, doors, piping systems, etc., as well as an assessment of indoor air exchange. The time of year for energy audits doesn't matter; assessment of natural gas leaks;
-    - analysis of the ventilation system, humidity and light levels, as well as a set of other studies, depending on the specifics of the building.
+<li> monitoring of heat losses through walls, windows, doors, piping systems, etc., as well as an assessment of indoor air exchange. The time of year for energy audits doesn't matter;</li>
+<li> assessment of natural gas leaks;</li>
+<li> analysis of the ventilation system, humidity and light levels, as well as a set of other studies, depending on the specifics of the building.</li>
     Only in this way can a list of effective measures for tangible energy savings be formulated.
-    </p>
+</h5></p>
 
 
-
+</body>
 
 </html>

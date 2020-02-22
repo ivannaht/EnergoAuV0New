@@ -46,7 +46,7 @@
     <form  method="get" action="Feedback">
         <tr><td colspan="2" style="text-align: center"><input type="submit" value="Feedback"></td></tr></form>
     <form  method="post" action="">
-        <tr><td colspan="2" style="text-align: center"><input type="submit" value="Sign out"></td></tr></form>
+        <tr><td colspan="2" style="text-align: center"><input type="submit"  value="Sign out"></td></tr></form>
 
 
 </table>

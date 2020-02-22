@@ -70,26 +70,10 @@ label {class: "w3-row-padding";
 
                                 </form>
 
-    <link rel="stylesheet" href="../lib/w3.css">
-    <body class="w3-container">
-    <ul class="w3-navbar w3-card-8>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-    </ul>
-
-    <div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-        <button class="w3-btn w3-round-large" onclick="     ">Back to main</button>
+    <div class="w3-container w3-opacity w3-right-align w3-padding">
+        <a href="/index.jsp"  class="w3-btn w3-round-large" >back to main</a>
     </div>
 
-    <div>
-        <a href="/main?first=True" id="go-to-main" class="w3-btn w3-round-large" class="look-button">
-            <div id="child-to-main">Find a book</div></a>
-        <!--<a href="/main" id="go-to-main" onclick="hey()" class="w3-btn w3-round-large" class="look-button">
-        <div id="child-to-main">Etsi kirja</div></a>-->
-    </div>
-
-</body>
+   </body>
 </div>
 </html>
