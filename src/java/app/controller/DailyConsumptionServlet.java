@@ -11,18 +11,20 @@ import java.io.PrintWriter;
 @WebServlet("/DailyConsumption")
 public class DailyConsumptionServlet extends HttpServlet {
 
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect("dailyConsumption.jsp");
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter printWriter;
+       /* PrintWriter printWriter;
         try {
             printWriter = resp.getWriter();
             printWriter.println("Daily Consumption");
         } catch (IOException exc) {
-        }
+        }*/
     }
 
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            resp.sendRedirect("dailyConsumption.jsp");
-        }
+
 
     }
