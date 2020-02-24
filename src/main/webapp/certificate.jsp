@@ -59,7 +59,7 @@ mso-fareast-language:UK;mso-no-proof:yes'>Адреса (місцезнаходж
 2.4pt;margin-left:0cm;mso-para-margin-top:.2gd;mso-para-margin-right:-.05pt;
 mso-para-margin-bottom:.2gd;mso-para-margin-left:0cm;line-height:normal;
 background:white'><span style='font-size:12.0pt;font-family:"Times New Roman","serif";
-mso-fareast-language:UK;mso-no-proof:yes'>Функціональне призначення та назва:(Взяти дані з таблиці) <o:p></o:p></span></p>
+mso-fareast-language:UK;mso-no-proof:yes'>Функціональне призначення та назва:(Взяти дані з таблиці)<%=request.getAttribute("Name_of_institutionUser")%> <o:p></o:p></span></p>
 
     <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=1117
            style='width:558.25pt;border-collapse:collapse;border:none;mso-border-alt:
