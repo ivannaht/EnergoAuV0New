@@ -24,7 +24,14 @@
     }
 </style>
 </body>
+<div class="w3-container w3-blue-grey w3-opacity w3-right-align">
+    <h1>Energy audit of budgetary institutions</h1>
+</div>
 
+<div class="w3-card-4">
+    <div class="w3-container w3-center w3-green">
+        <h2>Daily consumption of energy resources</h2>
+    </div>
 <body>
 
 <form>
@@ -33,12 +40,26 @@
         <input type="date" id="bday" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
         <span class="validity"></span>
     </div>
-    <div>
-        <input type="submit">
-    </div>
-</form
 
-
+</form>
+<div><h3>Costs, UAH:</h3></div>
+<form onsubmit="return false" oninput="res.value = quant.valueAsNumber*price.valueAsNumber">
+    <fieldset style="width: 50%">
+        <legend>electricity</legend>
+        <input type="number" placeholder="Quantity, kWh" id="quant" name="quant" />
+        <input type="number" placeholder="Price, for kWh (including VAT) UAH" id="price" name="price" />
+             <output for="quant name" name="res" />
+        </fieldset>
+   </form>
+<form onsubmit="return false" oninput="res.value = quant.valueAsNumber*price.valueAsNumber">
+<fieldset style="width: 50%">
+        <legend>gas</legend>
+        <input type="number" placeholder="Quantity, cubic m" id="quant" name="quant" />
+        <input type="number" placeholder="Price UAH for cubic m (including VAT)" id="price" name="price" />
+        <output  for="quant name" name="res" />
+  </fieldset>
+   </form>
+<input type="submit" value="Submit" />
 
 </body>
 </html>
