@@ -29,7 +29,7 @@ public class AddServlet extends HttpServlet {
 
         String Login = req.getParameter("Login");
         String Password = req.getParameter("Password");
-        String Name_of_institution = req.getParameter(" Name_of_institution");
+        String Name_of_institution = req.getParameter("Name_of_institution");
         String Head_of_institution = req.getParameter("Head_of_institution");
         String Phone_number = req.getParameter("Phone_number");
         InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
