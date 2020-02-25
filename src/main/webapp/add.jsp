@@ -26,21 +26,21 @@
             <h2>Add institution</h2>
         </div>
 
-        <form method="post" class="w3-selection w3-light-grey w3-padding">
-            <label>Login:
-                <input type="text" name="login" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+        <form  id="addInstitution" method="post" action="Add"class="w3-selection w3-light-grey w3-padding">
+            <label  for="Login">Login:
+                <input type="text"  id="Login" name="Login" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
-            <label>Password:
-                <input type="password" name="pass" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <label for="Password">Password:
+                <input type="password" id="Password" name="Password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
-            <label>Name_of_institution:
-                <input type="text" name="Name_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
+            <label for="Name_of_institution">Name_of_institution:
+                <input type="text" id="Name_of_institution" name="Name_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
             </label>
-            <label>Head_of_institution:
-                <input type="text" name="Head_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
+            <label for="Head_of_institution">Head_of_institution:
+                <input type="text" id="Head_of_institution" name="Head_of_institution" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 60%"><br />
             </label>
-            <label>Phone_number:
-                <input type="text" name="Phone_number" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <label for="Phone_number">Phone_number:
+                <input type="text" id="Phone_number" name="Phone_number" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
