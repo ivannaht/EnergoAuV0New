@@ -26,7 +26,8 @@
             <h2>Add institution</h2>
         </div>
 
-        <form  id="addInstitution" method="post" action="Add"class="w3-selection w3-light-grey w3-padding">
+        <form  id="add_form" method="post" action="Add"class="w3-selection w3-light-grey w3-padding">
+            <input id="add_redirect" type="hidden" value="/data-received">
             <label  for="Login">Login:
                 <input type="text"  id="Login" name="Login" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
@@ -42,7 +43,7 @@
             <label for="Phone_number">Phone_number:
                 <input type="text" id="Phone_number" name="Phone_number" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
+            <input class="w3-btn w3-green w3-round-large w3-margin-bottom" onclick="checkaddForm(); return false;" type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" value="Submit">
         </form>
     </div>
 </div>

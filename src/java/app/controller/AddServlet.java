@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/Add")
 public class AddServlet extends HttpServlet {
@@ -33,7 +34,12 @@ public class AddServlet extends HttpServlet {
         String Phone_number = req.getParameter("Phone_number");
         InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
 
-
+ PrintWriter printWriter;
+        try {
+            printWriter = resp.getWriter();
+            printWriter.println( "<h3>"+"<li>"+"Registration successful."+ "</li>"+ "<li>" +"Go to the "+"<a href=\"/index.jsp\" />" +"main page"+"</a>"+"</li>");
+        } catch (IOException exc) {
+        }
 
     }
 
