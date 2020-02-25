@@ -1,6 +1,8 @@
 package app.controller;
 
 import app.dao.entity.Institution;
+import app.dao.repository.FeedbackRepository;
+import app.dao.repository.InstitutionRepository;
 
 
 import javax.servlet.RequestDispatcher;
@@ -20,13 +22,19 @@ public class AddServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        resp.setContentType("text/html;charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
+
         String Login = req.getParameter("Login");
         String Password = req.getParameter("Password");
-        Institution institution = new Institution(Login, Password);
-       // Model model = Model.getInstance();
-       // model.add(institution);
-        req.setAttribute("Login", Login);
-        doGet(req, resp);
+        String Name_of_institution = req.getParameter(" Name_of_institution");
+        String Head_of_institution = req.getParameter("Head_of_institution");
+        String Phone_number = req.getParameter("Phone_number");
+        InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
+
+
+
     }
 
 }
