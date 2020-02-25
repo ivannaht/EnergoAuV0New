@@ -34,7 +34,9 @@ public class AddServlet extends HttpServlet {
         String Phone_number = req.getParameter("Phone_number");
         InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
 
- PrintWriter printWriter;
+        InstitutionRepository.addBuilding(Login,Name_of_institution);
+
+        PrintWriter printWriter;
         try {
             printWriter = resp.getWriter();
             printWriter.println( "<h3>"+"<li>"+"Registration successful."+ "</li>"+ "<li>" +"Go to the "+"<a href=\"/index.jsp\" />" +"main page"+"</a>"+"</li>");
