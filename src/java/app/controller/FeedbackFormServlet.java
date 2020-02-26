@@ -36,12 +36,12 @@ public class FeedbackFormServlet extends HttpServlet {
         String Comments = request.getParameter("Comments");
         FeedbackRepository.addFeedback(First_Name, Last_Name, Email, Subject, Comments);
 
-        /*PrintWriter printWriter;
+        PrintWriter printWriter;
         try {
             printWriter = response.getWriter();
             printWriter.println("Feedback send");
         } catch (IOException exc) {
-        }*/
+        }
     }
 }
 

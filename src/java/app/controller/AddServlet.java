@@ -3,8 +3,6 @@ package app.controller;
 import app.dao.entity.Institution;
 import app.dao.repository.FeedbackRepository;
 import app.dao.repository.InstitutionRepository;
-
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,9 +30,9 @@ public class AddServlet extends HttpServlet {
         String Name_of_institution = req.getParameter("Name_of_institution");
         String Head_of_institution = req.getParameter("Head_of_institution");
         String Phone_number = req.getParameter("Phone_number");
-        InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
 
-        InstitutionRepository.addBuilding(Login,Name_of_institution);
+        InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
+        InstitutionRepository.addBuilding(Login, Name_of_institution);
 
         PrintWriter printWriter;
         try {
@@ -42,7 +40,5 @@ public class AddServlet extends HttpServlet {
             printWriter.println( "<h3>"+"<li>"+"Registration successful."+ "</li>"+ "<li>" +"Go to the "+"<a href=\"/index.jsp\" />" +"main page"+"</a>"+"</li>");
         } catch (IOException exc) {
         }
-
-    }
-
-}
+          }
+  }
