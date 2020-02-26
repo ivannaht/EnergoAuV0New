@@ -23,6 +23,33 @@ create table building_parameters
 alter table building_parameters
     add primary key (Login);
 
+create table daily_consumption
+(
+    Login                varchar(20) not null
+        primary key,
+    Name_of_institution  tinytext    not null,
+    Date_of_consumption  date        null,
+    Price_electricity    double      null,
+    Quantity_electricity int         null,
+    Costs_electricity    double      null,
+    Price_gas            double      null,
+    Quantity_gas         int         null,
+    Costs_gas            double      null,
+    Price_heat_energy    double      null,
+    Quantity_heat_energy int         null,
+    Costs_heat_energy    double      null,
+    Total_amount_per_day double      null
+);
+
+create table feedback
+(
+    First_Name varchar(30) null,
+    Last_Name  varchar(30) null,
+    Email      varchar(30) null,
+    Subject    varchar(30) null,
+    Comments   tinytext    null
+);
+
 create table institution
 (
     Login               varchar(20) not null,
@@ -39,39 +66,37 @@ alter table institution
 
 create table main_indicators_of_energy_efficiency
 (
-    Login                                  varchar(20)  null,
-    Name_of_institution                    varchar(90)  null,
-    Energy_efficiency_class                char         null,
-    Image_class                            blob         null,
-    Heated_area                            double(7, 2) null,
-    Heated_volume                          double(8, 2) null,
-    Specific_energy_consumption_kWh_for_m3 double(5, 2) null,
-    Specific_consumption_of_primery_energy double(6, 2) null,
-    Specific_CO2_emissions                 double(5, 2) null,
-    Date_of_data_entry                     date         null,
+    Login                                  varchar(20) default '' not null,
+    Name_of_institution                    varchar(90)            null,
+    Energy_efficiency_class                char                   null,
+    Image_class                            blob                   null,
+    Heated_area                            double(7, 2)           null,
+    Heated_volume                          double(8, 2)           null,
+    Specific_energy_consumption_kWh_for_m3 double(5, 2)           null,
+    Specific_consumption_of_primery_energy double(6, 2)           null,
+    Specific_CO2_emissions                 double(5, 2)           null,
+    Date_of_data_entry                     date                   null,
     constraint main_indicators_of_energy_efficiency_Login_uindex
         unique (Login)
 );
 
+alter table main_indicators_of_energy_efficiency
+    add primary key (Login);
+
 create table photos
 (
-    image_id   tinyint     null,
-    image_type varchar(25) null,
-    image      blob        null,
-    image_size varchar(25) null,
-    image_ctgy varchar(25) null,
-    image_name varchar(50) null,
-    Login      varchar(20) null
+    Login               varchar(20) not null
+        primary key,
+    Image_id            tinyint     null,
+    Image_type          varchar(25) null,
+    Image               blob        null,
+    Image_size          varchar(25) null,
+    Image_ctgy          varchar(25) null,
+    Image_name          varchar(50) null,
+    Name_of_institution tinytext    null
 );
 
-create table energoauditukr.feedback
-(
-    First_Name varchar(30) null,
-    Last_Name  varchar(30) null,
-    Email      varchar(30) null,
-    Subject    varchar(30) null,
-    Comments   tinytext    null
-);
+
 
 INSERT INTO energoauditukr.institution (Login, Password, Name_of_institution, Head_of_institution, Phone_number) VALUES ('admin', '1111', 'Administration', 'Admin Admin Admin', '+380501234567');
 INSERT INTO energoauditukr.institution (Login, Password, Name_of_institution, Head_of_institution, Phone_number) VALUES ('example@umail.net', '123456', 'Школа', 'Прізвище Ім''я По батькові', '+380501234567');
