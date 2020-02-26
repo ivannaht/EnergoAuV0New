@@ -47,7 +47,7 @@
     <fieldset style="width: 50%">
         <legend>electricity</legend>
         <input type="number" placeholder="Quantity, kWh" id="quant" name="quant" />
-        <input type="number" placeholder="Price, for kWh (including VAT) UAH" id="price" name="price" />
+        <input type="number" placeholder="Price for kWh (including VAT) UAH" id="price" name="price" />
              <output for="quant name" name="res" />
         </fieldset>
    </form>
@@ -59,6 +59,15 @@
         <output  for="quant name" name="res" />
   </fieldset>
    </form>
+<form onsubmit="return false" oninput="res.value = quant.valueAsNumber*price.valueAsNumber">
+    <fieldset style="width: 50%">
+        <legend>heat energy</legend>
+        <input type="number" placeholder="Quantity, Gcal" id="quant" name="quant" />
+        <input type="number" placeholder="Price UAH for Gcal (including VAT)" id="price" name="price" />
+        <output  for="quant name" name="res" />
+    </fieldset>
+</form>
+
 <input type="submit" value="Submit" />
 
 </body>
