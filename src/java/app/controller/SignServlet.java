@@ -1,5 +1,7 @@
 package app.controller;
+import app.dao.entity.Building;
 import app.dao.entity.Institution;
+import app.dao.repository.BuildingRepository;
 import app.dao.repository.InstitutionRepository;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -45,7 +47,6 @@ public class SignServlet extends HttpServlet {
             String Head_of_institutionUser = institution.getHead_of_institution();
             String Phone_numberUser = institution.getPhone_number();
             System.out.println(LoginUser + PasswordUser + Name_of_institutionUser + Head_of_institutionUser + Phone_numberUser);
-
             req.setAttribute("LoginUser", LoginUser);
             req.setAttribute("PasswordUser", PasswordUser);
             req.setAttribute("Name_of_institutionUser", Name_of_institutionUser);
@@ -55,24 +56,25 @@ public class SignServlet extends HttpServlet {
         //from table dbilding_parameters
         BuildingRepository buildingRepository = new BuildingRepository();
         Building building = buildingRepository.getByLogin(Login);
+            String LocationsUser = building.getLocations();
+            String SettlementUser = building.getSettlement();
+            String RegionUser = building.getRegion();
+            String Functional_purposeUser = building.getFunctional_purpose();
+            String Year_of_commissioningUser = building.getYear_of_commissioning();
+            int Number_of_floorsUser = building.getNumber_of_floors();
+            String Photo_main_pathUser = building.getPhoto_main_path();
+            int Id_numberUser = building.getId_number();
 
-            System.out.println(" Locations: " + building_parameters.getLocations());
+            req.setAttribute("LocationsUser", LocationsUser);
+            req.setAttribute("SettlementUser", SettlementUser);
+            req.setAttribute("RegionUser", RegionUser);
+            req.setAttribute("Functional_purposeUser",Functional_purposeUser);
+            req.setAttribute("Year_of_commissioningUser", Year_of_commissioningUser);
+            req.setAttribute("Number_of_floorsUser", Number_of_floorsUser);
+            req.setAttribute("Photo_main_pathUser", Photo_main_pathUser);
+            req.setAttribute("Id_numberUser", Id_numberUser);
 
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
-            req.setAttribute("Phone_numberUser", Phone_numberUser);
+
 
         } else {
             resp.sendRedirect("index.jsp");
