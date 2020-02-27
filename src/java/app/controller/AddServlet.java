@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.dao.entity.Institution;
+import app.dao.repository.BuildingRepository;
 import app.dao.repository.FeedbackRepository;
 import app.dao.repository.InstitutionRepository;
 import javax.servlet.RequestDispatcher;
@@ -32,7 +33,7 @@ public class AddServlet extends HttpServlet {
         String Phone_number = req.getParameter("Phone_number");
 
         InstitutionRepository.addInstitution(Login, Password, Name_of_institution, Head_of_institution, Phone_number);
-        InstitutionRepository.addBuilding(Login, Name_of_institution);
+        BuildingRepository.addFastBuilding(Login, Name_of_institution);
 
         PrintWriter printWriter;
         try {

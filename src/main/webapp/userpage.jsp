@@ -116,7 +116,7 @@
         </tr>
         <tr>
             <td>Heated volume</td>
-            <td><%=request.getAttribute("Heated_volume")%></td>
+            <td><%=request.getAttribute("Heated_volumeUser")%></td>
         </tr>
         <tr>
             <td>Specific energy consumption, kWh for m3</td>

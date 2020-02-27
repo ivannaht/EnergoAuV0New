@@ -40,15 +40,15 @@ public class BuildingRepository {
         return null;
     }
 
-    public static void addInstitution(String Login, String Password, String Name_of_institution, String Head_of_institution, String Phone_number) {
+    public static void addFastBuilding(String Login, String Name_of_institution) {
         Connection connection = null;
         Statement stmt = null;
         DataSource dataSource = new DataSource();
         try {
             connection = dataSource.getConnection();
             stmt = connection.createStatement();
-            stmt.executeUpdate("INSERT INTO institution (Login, Password, Name_of_institution, Head_of_institution, Phone_number)" +
-                    "VALUES ('" + Login + "','" + Password + "', '" + Name_of_institution + "','" + Head_of_institution + "','" + Phone_number + "')");
+            stmt.executeUpdate("INSERT INTO building_parameters (Login, Name_of_institution)" +
+                    "VALUES ('" + Login + "', '" + Name_of_institution + "'");
 
         } catch (SQLException e) {
             e.printStackTrace();

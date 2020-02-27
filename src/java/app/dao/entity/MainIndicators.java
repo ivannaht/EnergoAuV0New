@@ -1,5 +1,6 @@
 package app.dao.entity;
 
+import java.sql.Date;
 import java.util.Objects;
 
 public class MainIndicators {
@@ -10,13 +11,13 @@ public class MainIndicators {
     private double Specific_energy_consumption_kWh_for_m3;
     private double Specific_consumption_of_primery_energy;
     private double Specific_CO2_emissions;
-    private char Energy_efficiency_class;
+    private String Energy_efficiency_class;
     private long Image_class;
-    private String Date_of_data_entry;
+    private Date Date_of_data_entry;
 
 public MainIndicators () {}
 
-    public MainIndicators(String login, String name_of_institution, double heated_area, double heated_volume, double specific_energy_consumption_kWh_for_m3, double specific_consumption_of_primery_energy, double specific_CO2_emissions, char energy_efficiency_class, long image_class, String date_of_data_entry) {
+    public MainIndicators(String login, String name_of_institution, double heated_area, double heated_volume, double specific_energy_consumption_kWh_for_m3, double specific_consumption_of_primery_energy, double specific_CO2_emissions, String energy_efficiency_class, long image_class, Date date_of_data_entry) {
         this.Login = login;
         this.Name_of_institution = name_of_institution;
         this.Heated_area = heated_area;
@@ -85,11 +86,11 @@ public MainIndicators () {}
         Specific_CO2_emissions = specific_CO2_emissions;
     }
 
-    public char getEnergy_efficiency_class() {
+    public String getEnergy_efficiency_class() {
         return Energy_efficiency_class;
     }
 
-    public void setEnergy_efficiency_class(char energy_efficiency_class) {
+    public void setEnergy_efficiency_class(String energy_efficiency_class) {
         Energy_efficiency_class = energy_efficiency_class;
     }
 
@@ -101,11 +102,11 @@ public MainIndicators () {}
         Image_class = image_class;
     }
 
-    public String getDate_of_data_entry() {
+    public Date getDate_of_data_entry() {
         return Date_of_data_entry;
     }
 
-    public void setDate_of_data_entry(String date_of_data_entry) {
+    public void setDate_of_data_entry(Date date_of_data_entry) {
         Date_of_data_entry = date_of_data_entry;
     }
 

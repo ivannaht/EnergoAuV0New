@@ -54,31 +54,12 @@ public class InstitutionRepository {
             }
         }
     }
-
-    public static void addBuilding(String Login, String Name_of_institution) {
-        Connection connection = null;
-        Statement stmt = null;
-        DataSource dataSource = new DataSource();
-        try {
-            connection = dataSource.getConnection();
-            stmt = connection.createStatement();
-            stmt.executeUpdate("INSERT INTO building_parameters (Login, Name_of_institution)" +
-                    "VALUES ('" + Login + "', '" + Name_of_institution + "'");
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (connection != null) connection.close();
-                if (stmt != null) stmt.close();
-            } catch (SQLException exc) {
-            }
-        }
-
-
     }
 
-}
+
+
+
+
 
 
 
