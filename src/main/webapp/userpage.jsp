@@ -84,8 +84,8 @@
             <td><%=request.getAttribute("LocationsUser")%></td>
         </tr>
         <tr>
-            <td>Settlememt</td>
-            <td><%=request.getAttribute("SettlememtUser")%></td>
+            <td>Settlement</td>
+            <td><%=request.getAttribute("SettlementUser")%></td>
         </tr>
         <tr>
         <tr>

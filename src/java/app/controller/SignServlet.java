@@ -37,10 +37,6 @@ public class SignServlet extends HttpServlet {
         if (institution != null) {
             System.out.println("Name_of_institution: " + institution.getName_of_institution());
 
-            RequestDispatcher view = req.getRequestDispatcher("userpage.jsp");
-            view.forward(req, resp);
-            req.setAttribute("location", Locale.getDefault());
-
             String LoginUser = institution.getLogin();
             String PasswordUser = institution.getPassword();
             String Name_of_institutionUser = institution.getName_of_institution();
@@ -76,6 +72,9 @@ public class SignServlet extends HttpServlet {
 
 
 
+            req.setAttribute("location", Locale.getDefault());
+            RequestDispatcher view = req.getRequestDispatcher("userpage.jsp");
+            view.forward(req, resp);
         } else {
             resp.sendRedirect("index.jsp");
         }
