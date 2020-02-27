@@ -66,15 +66,15 @@
             <td><%=request.getAttribute("PasswordUser")%></td>
         </tr>
         <tr>
-            <td>Name_of_institution</td>
+            <td>Name of institution</td>
             <td><%=request.getAttribute("Name_of_institutionUser")%></td>
         </tr>
         <tr>
-            <td>Head_of_institution</td>
+            <td>Head of institution</td>
             <td><%=request.getAttribute("Head_of_institutionUser")%></td>
         </tr>
         <tr>
-            <td>Phone_number</td>
+            <td>Phone number</td>
             <td><%=request.getAttribute("Phone_numberUser")%></td>
         </tr>
 
@@ -93,49 +93,49 @@
             <td><%=request.getAttribute("RegionUser")%></td>
         </tr>
         <tr>
-            <td>Functional_purpose</td>
+            <td>Functional purpose</td>
             <td><%=request.getAttribute("Functional_purposeUser")%></td>
         </tr>
         <tr>
-            <td>Year_of_commissioning</td>
+            <td>Year of commissioning</td>
             <td><%=request.getAttribute("Year_of_commissioningUser")%></td>
         </tr>
         <tr>
-            <td>Number_of_floors</td>
+            <td>Number of floors</td>
             <td><%=request.getAttribute("Number_of_floorsUser")%></td>
         </tr>
         <tr>
-            <td>Id_number</td>
+            <td>Id number</td>
             <td><%=request.getAttribute("Id_numberUser")%></td>
         </tr>
 
         <%-- main_indicators--%>
         <tr>
-            <td>Heated_area</td>
+            <td>Heated area</td>
             <td><%=request.getAttribute("Heated_areaUser")%></td>
         </tr>
         <tr>
-            <td>Heated_volume</td>
+            <td>Heated volume</td>
             <td><%=request.getAttribute("Heated_volume")%></td>
         </tr>
         <tr>
-            <td>Specific_energy_consumption_kWh_for_m3</td>
+            <td>Specific energy consumption, kWh for m3</td>
             <td><%=request.getAttribute("Specific_energy_consumption_kWh_for_m3User")%></td>
         </tr>
         <tr>
-            <td>Specific_consumption_of_primery_energy</td>
+            <td>Specific consumption of primery_energy</td>
             <td><%=request.getAttribute("Specific_consumption_of_primery_energyUser")%></td>
         </tr>
         <tr>
-            <td>Specific_CO2_emissions</td>
+            <td>Specific CO2 emissions</td>
             <td><%=request.getAttribute("Specific_CO2_emissionsUser")%></td>
         </tr>
         <tr>
-            <td>Energy_efficiency_class</td>
+            <td>Energy efficiency class</td>
             <td><%=request.getAttribute("Energy_efficiency_classUser")%></td>
         </tr>
         <tr>
-            <td>Date_of_data_entry</td>
+            <td>Date of data entry</td>
             <td><%=request.getAttribute("Date_of_data_entryUser")%></td>
         </tr>
     </table>
