@@ -78,6 +78,58 @@
             <td>Phone_number</td>
             <td><%=request.getAttribute("Phone_numberUser")%></td>
         </tr>
+
+        <%-- building_parameters--%>
+        <tr>
+            <td>Locations</td>
+            <td><%=request.getAttribute("LocationsUser")%></td>
+        </tr>
+        <tr>
+            <td>Settlememt</td>
+            <td><%=request.getAttribute("SettlememtUser")%></td>
+        </tr>
+        <tr>
+        <tr>
+            <td>Region</td>
+            <td><%=request.getAttribute("RegionUser")%></td>
+        </tr>
+        <tr>
+            <td>Functional_purpose</td>
+            <td><%=request.getAttribute("Functional_purposeUser")%></td>
+        </tr>
+        <tr>
+            <td>Year_of_commissioning</td>
+            <td><%=request.getAttribute("Year_of_commissioningUser")%></td>
+        </tr>
+        <tr>
+            <td>Number_of_floors</td>
+            <td><%=request.getAttribute("Number_of_floorsUser")%></td>
+        </tr>
+        <tr>
+            <td>Id_number</td>
+            <td><%=request.getAttribute("Id_numberUser")%></td>
+        </tr>
+
+        <%-- main_indicators--%>
+        <tr>
+            <td>Phone_number</td>
+            <td><%=request.getAttribute("Phone_numberUser")%></td>
+        </tr>
+        <tr>
+            <td>Phone_number</td>
+            <td><%=request.getAttribute("Phone_numberUser")%></td>
+        </tr>
+        <tr>
+            <td>Phone_number</td>
+            <td><%=request.getAttribute("Phone_numberUser")%></td>
+        </tr>
+        <tr>
+            <td>Phone_number</td>
+            <td><%=request.getAttribute("Phone_numberUser")%></td>
+        </tr>
+
+
+
     </table>
 </form>
 
