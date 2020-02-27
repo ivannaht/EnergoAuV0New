@@ -53,7 +53,7 @@
 
 </table>
 </td>
-    <img src="image0012.jpg" align=left style='width:290pt;height:190pt;visibility:visible;mso-wrap-style:square'o:title="Image"; alt="image not found"/>
+    <img src="image0012.jpg" align=left style='width:290pt;height:190pt;visibility:visible;mso-wrap-style:square'title="Image"; alt="image not found"/>
 
    <form  method="post" action="Sign">
     <table style= "width: 50%; background-color: #e7e7e7; color: #020202; margin-left: 50%; border: #B2E2D7;line-height: 2.5;">
