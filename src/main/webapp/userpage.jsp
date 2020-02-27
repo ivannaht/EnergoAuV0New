@@ -53,10 +53,9 @@
 
 </table>
 </td>
-    <img src="image0012.jpg" align=left style='width:245pt;height:164pt;visibility:visible;mso-wrap-style:square'o:title="Фото"; alt="діаграма"/>
+    <img src="image0012.jpg" align=left style='width:290pt;height:190pt;visibility:visible;mso-wrap-style:square'o:title="Image"; alt="image not found"/>
 
-
-<form  method="post" action="Sign">
+   <form  method="post" action="Sign">
     <table style= "width: 50%; background-color: #e7e7e7; color: #020202; margin-left: 50%; border: #B2E2D7;line-height: 2.5;">
         <tr>
             <td>Login</td>
@@ -112,33 +111,41 @@
 
         <%-- main_indicators--%>
         <tr>
-            <td>Phone_number</td>
-            <td><%=request.getAttribute("Phone_numberUser")%></td>
+            <td>Heated_area</td>
+            <td><%=request.getAttribute("Heated_areaUser")%></td>
         </tr>
         <tr>
-            <td>Phone_number</td>
-            <td><%=request.getAttribute("Phone_numberUser")%></td>
+            <td>Heated_volume</td>
+            <td><%=request.getAttribute("Heated_volume")%></td>
         </tr>
         <tr>
-            <td>Phone_number</td>
-            <td><%=request.getAttribute("Phone_numberUser")%></td>
+            <td>Specific_energy_consumption_kWh_for_m3</td>
+            <td><%=request.getAttribute("Specific_energy_consumption_kWh_for_m3User")%></td>
         </tr>
         <tr>
-            <td>Phone_number</td>
-            <td><%=request.getAttribute("Phone_numberUser")%></td>
+            <td>Specific_consumption_of_primery_energy</td>
+            <td><%=request.getAttribute("Specific_consumption_of_primery_energyUser")%></td>
         </tr>
-
-
-
+        <tr>
+            <td>Specific_CO2_emissions</td>
+            <td><%=request.getAttribute("Specific_CO2_emissionsUser")%></td>
+        </tr>
+        <tr>
+            <td>Energy_efficiency_class</td>
+            <td><%=request.getAttribute("Energy_efficiency_classUser")%></td>
+        </tr>
+        <tr>
+            <td>Date_of_data_entry</td>
+            <td><%=request.getAttribute("Date_of_data_entryUser")%></td>
+        </tr>
     </table>
 </form>
-
 
     <table center>
         <tr>
             <th>location</th>
-                <td><%=request.getAttribute("location")%></td>
-            </tr>
+            <td><%=request.getAttribute("location")%></td>
+        </tr>
     </table>
 
 

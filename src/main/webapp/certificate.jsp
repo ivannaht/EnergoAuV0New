@@ -48,7 +48,6 @@ line-height:normal;background:white'><span style='font-size:12.0pt;font-family:
         <o:lock v:ext="edit" aspectratio="t"/><v:shape o:spid="_x0000_i1032" type="#_x0000_t75"><img src="image001.jpg"style='width:556.5pt;height:7.5pt;visibility:visible;mso-wrap-style:square'></v:shape><o:p></o:p></span></p>
 
 
-
     <p class=MsoNormal style='margin-top:2.4pt;margin-right:-.05pt;margin-bottom:
 2.4pt;margin-left:0cm;mso-para-margin-top:.2gd;mso-para-margin-right:-.05pt;
 mso-para-margin-bottom:.2gd;mso-para-margin-left:0cm;line-height:normal;
@@ -190,6 +189,11 @@ mso-fareast-language:UK;mso-no-proof:yes'>Функціональне призн�
                 </span><span style='font-size:12.0pt;font-family:"Times New Roman","serif"; mso-fareast-language:UK'><o:p></o:p></span></p>
             </td>
         </tr>
+
+
+
+
+
         <tr style='mso-yfti-irow:2;height:31.2pt'>
             <td width=890 colspan=4 valign=top style='width:444.85pt;border:solid #00CCFF 1.5pt;
   border-top:none;mso-border-top-alt:solid #00CCFF 1.5pt;background:#B2E2D7;
