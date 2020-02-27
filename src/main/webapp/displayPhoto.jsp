@@ -27,7 +27,7 @@
     <h2>Add photo</h2>
 </div>
 
-<form method="post" multipart="" enctype="multipart/form-data" class="w3-selection w3-light-grey w3-padding">
+<form method="post" multipart="Photo" enctype="multipart/form-data" class="w3-selection w3-light-grey w3-padding">
 <input type="file" name="img[]" multiple class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
 <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
 </form>

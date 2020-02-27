@@ -39,7 +39,7 @@ public class FeedbackFormServlet extends HttpServlet {
         PrintWriter printWriter;
         try {
             printWriter = response.getWriter();
-            printWriter.println("Feedback send");
+            printWriter.println( "<h3>"+"<li>"+"Feedback send successful."+ "</li>"+ "<li>" +"Go to the "+"<a href=\"/index.jsp\" />" +"main page"+"</a>"+"</li>");
         } catch (IOException exc) {
         }
     }

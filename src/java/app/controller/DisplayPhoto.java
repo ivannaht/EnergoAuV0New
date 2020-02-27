@@ -18,48 +18,6 @@ public class DisplayPhoto extends HttpServlet {
     }}
 
 
-      /*  foreach($img_desc as $val)
-        {
-            $newname = date('YmdHis',time()).mt_rand().'.jpg';
-            move_uploaded_file($val['tmp_name'],'./filedat/'.$newname);
-            $links .= './filedat/'.$newname.', ';
-            $connect = mysqli_connect('localhost', 'root', '');
-            mysqli_select_db($connect, 'mydb');
-            $query = "INSERT INTO pics (links) VALUES ('$links')";
-            if($links) {
-                mysqli_query($connect, $query);*/
-
-        /* $imgData = file_get_contents($filename);
-$size = getimagesize($filename);
-mysql_connect("localhost", "$username", "$password");
-mysql_select_db ("$dbname");
-// mysqli
-// $link = mysqli_connect("localhost", $username, $password,$dbname);
-$sql = sprintf("INSERT INTO testblob
-    (image_type, image, image_size, image_name)
-    VALUES
-    ('%s', '%s', '%d', '%s')",
-
-    mysql_real_escape_string($size['mime']),
-    mysql_real_escape_string($imgData),
-    $size[3],
-    mysql_real_escape_string($_FILES['userfile']['name'])
-    );
-mysql_query($sql);  */
-
-
-        /*Для отображения картинки на веб странице
-
-$link = mysql_connect("localhost", "username", "password");
-mysql_select_db("testblob");
-$sql = "SELECT image FROM testblob WHERE image_id=0";
-$result = mysql_query("$sql");
-header("Content-type: image/jpeg");
-echo mysql_result($result, 0);
-mysql_close($link);
-
-
-         */
 
 
 
