@@ -18,7 +18,9 @@ import java.util.Locale;
 @WebServlet("/Sign")
 public class SignServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {}
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
@@ -26,35 +28,57 @@ public class SignServlet extends HttpServlet {
         String Login = req.getParameter("Login");
         String Password = req.getParameter("Password");
         System.out.println(Login + Password);
-            InstitutionRepository institutionRepository = new InstitutionRepository();
-            Institution institution = institutionRepository.getByLoginByPassword(Login, Password);
 
-            if(institution != null) {
-                System.out.println("<h2>Hello " + institution.getName_of_institution() + "</h2>");
-                req.setAttribute("location", Locale.getDefault());
+        //from table institution
+        InstitutionRepository institutionRepository = new InstitutionRepository();
+        Institution institution = institutionRepository.getByLoginByPassword(Login, Password);
+        if (institution != null) {
+            System.out.println("Name_of_institution: " + institution.getName_of_institution());
 
-                String LoginUser = institution.getLogin() ;
-                String PasswordUser = institution.getPassword();
-                String Name_of_institutionUser = institution.getName_of_institution();
-                String Head_of_institutionUser = institution.getHead_of_institution();
-                String Phone_numberUser = institution.getPhone_number();
+            RequestDispatcher view = req.getRequestDispatcher("userpage.jsp");
+            view.forward(req, resp);
+            req.setAttribute("location", Locale.getDefault());
 
-                System.out.println(LoginUser+ PasswordUser+Name_of_institutionUser+Head_of_institutionUser+Phone_numberUser);
+            String LoginUser = institution.getLogin();
+            String PasswordUser = institution.getPassword();
+            String Name_of_institutionUser = institution.getName_of_institution();
+            String Head_of_institutionUser = institution.getHead_of_institution();
+            String Phone_numberUser = institution.getPhone_number();
+            System.out.println(LoginUser + PasswordUser + Name_of_institutionUser + Head_of_institutionUser + Phone_numberUser);
 
-                req.setAttribute("LoginUser", LoginUser);
-                req.setAttribute("PasswordUser", PasswordUser);
-                req.setAttribute("Name_of_institutionUser", Name_of_institutionUser);
-                req.setAttribute("Head_of_institutionUser", Head_of_institutionUser);
-                req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("LoginUser", LoginUser);
+            req.setAttribute("PasswordUser", PasswordUser);
+            req.setAttribute("Name_of_institutionUser", Name_of_institutionUser);
+            req.setAttribute("Head_of_institutionUser", Head_of_institutionUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
 
-                RequestDispatcher view = req.getRequestDispatcher("userpage.jsp");
-                view.forward(req, resp);
-      }
-            else {
-                resp.sendRedirect("index.jsp");
-            }
-    }
+        //from table dbilding_parameters
+        BuildingRepository buildingRepository = new BuildingRepository();
+        Building building = buildingRepository.getByLogin(Login);
+
+            System.out.println(" Locations: " + building_parameters.getLocations());
+
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+            req.setAttribute("Phone_numberUser", Phone_numberUser);
+
+        } else {
+            resp.sendRedirect("index.jsp");
         }
+        }
+    }
 
 
 //PrintWriter out = resp.getWriter();
